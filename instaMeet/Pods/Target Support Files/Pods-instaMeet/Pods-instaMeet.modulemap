@@ -1,0 +1,6 @@
+framework module Pods_instaMeet {
+  umbrella header "Pods-instaMeet-umbrella.h"
+
+  export *
+  module * { export * }
+}
