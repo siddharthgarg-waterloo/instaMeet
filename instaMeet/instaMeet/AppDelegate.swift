@@ -64,13 +64,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     
     @objc private func goToLogin() {
-        let mapVC = MainMapViewController()
+        let mapVC = LoginViewController()
         mapVC.modalPresentationStyle = .fullScreen
         self.window?.rootViewController?.present(mapVC, animated: true, completion: nil)
         
 
         
-//        self.ref.child("7682364").setValue(["Latitude": 90,"Longitude": 90, "Looking": "PTSD","NumberOfPeople":3,"Status": "false" ])
+//        self.ref.child("89347927").setValue(["Latitude": 37.796,"Longitude": -122.26, "Looking": "PTSD","NumberOfPeople":3,"Status": "false" ])
 //        Alamofire.request("https://instameeter.appspot.com/preresponse", method: .post).responseJSON { response in
 //                    print(response.request)   // original url request
 //                    print(response.response) // http url response
@@ -81,18 +81,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        }
         
         
-        
-//        Alamofire.request("https://instameeter.appspot.com/response", method: .post).responseJSON { response in
-//            print(response.request)   // original url request
-//            print(response.response) // http url response
-//            print(response.result)  // response
-//            if let json = response.result.value {
-//                print(json)
-////                let new = json as! NSDictionary
-////                let high = new["highestRate"] as! Double
-//            }
-//
-//        }
     }
     
 }

@@ -13,7 +13,14 @@ class LoginViewController: UIViewController, UIImagePickerControllerDelegate, UI
 
     @IBOutlet weak var profilePictureUpload: UIButton!
     
+    @IBAction func goToHomeViewController(_ sender: Any) {
+        let homeVC = HomeViewController()
+        homeVC.image = chosenImage
+        homeVC.modalPresentationStyle = .fullScreen
+        present(homeVC, animated: true, completion: nil)
+    }
     let imagePicker = UIImagePickerController()
+    var chosenImage: UIImage? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -84,6 +91,7 @@ class LoginViewController: UIViewController, UIImagePickerControllerDelegate, UI
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            chosenImage = image
             profilePictureUpload.setBackgroundImage(image, for: .normal)
         }
         dismiss(animated: true, completion: nil)
