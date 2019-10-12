@@ -15,6 +15,10 @@ class MainMapViewController: UIViewController, CLLocationManagerDelegate, MKMapV
     @IBOutlet weak var mapView: MKMapView!
     let request = MKLocalSearch.Request()
     let locationPin = MKPointAnnotation()
+    @IBOutlet weak var meetUpinformation: UIView!
+    
+    var address: String = ""
+    var name: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +28,7 @@ class MainMapViewController: UIViewController, CLLocationManagerDelegate, MKMapV
         locationManager.requestLocation()
         
         mapView.showsUserLocation = true
-        request.naturalLanguageQuery = "new york city"
+        request.naturalLanguageQuery = address
         request.region = mapView.region
         let search = MKLocalSearch(request: request)
         
@@ -69,15 +73,18 @@ class MainMapViewController: UIViewController, CLLocationManagerDelegate, MKMapV
                 }
             }
         })
+        meetUpinformation.layer.cornerRadius = 30
+        meetUpinformation.layer.masksToBounds = true
         
         self.mapView.delegate = self
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        if let location = locations.last{
-            let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
-            let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
-        }
+//        if let location = locations.last{
+//            let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+//            let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
+//        }
+        return
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {

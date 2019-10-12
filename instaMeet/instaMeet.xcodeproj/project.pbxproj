@@ -22,6 +22,10 @@
 		35EA712923523C7000199480 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35EA712723523C6F00199480 /* HomeViewController.xib */; };
 		35EA713323524EA700199480 /* ReasonsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EA713123524EA700199480 /* ReasonsCollectionViewCell.swift */; };
 		35EA713423524EA700199480 /* ReasonsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35EA713223524EA700199480 /* ReasonsCollectionViewCell.xib */; };
+		35EA71372352599200199480 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EA71352352599200199480 /* ProfileViewController.swift */; };
+		35EA71382352599200199480 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35EA71362352599200199480 /* ProfileViewController.xib */; };
+		35EA714223527C7800199480 /* InQueueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EA714023527C7800199480 /* InQueueViewController.swift */; };
+		35EA714323527C7800199480 /* InQueueViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35EA714123527C7800199480 /* InQueueViewController.xib */; };
 		43338F239032D0A2243DDB7D /* Pods_instaMeet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A6E0DDF24BD8B0396890F38 /* Pods_instaMeet.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +47,10 @@
 		35EA712723523C6F00199480 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		35EA713123524EA700199480 /* ReasonsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReasonsCollectionViewCell.swift; sourceTree = "<group>"; };
 		35EA713223524EA700199480 /* ReasonsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReasonsCollectionViewCell.xib; sourceTree = "<group>"; };
+		35EA71352352599200199480 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		35EA71362352599200199480 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		35EA714023527C7800199480 /* InQueueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InQueueViewController.swift; sourceTree = "<group>"; };
+		35EA714123527C7800199480 /* InQueueViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InQueueViewController.xib; sourceTree = "<group>"; };
 		49EC8896289DA86BD66AE132 /* Pods-instaMeet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instaMeet.release.xcconfig"; path = "Target Support Files/Pods-instaMeet/Pods-instaMeet.release.xcconfig"; sourceTree = "<group>"; };
 		6A6E0DDF24BD8B0396890F38 /* Pods_instaMeet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_instaMeet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACE92BDAA85ACF748A1895F7 /* Pods-instaMeet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instaMeet.debug.xcconfig"; path = "Target Support Files/Pods-instaMeet/Pods-instaMeet.debug.xcconfig"; sourceTree = "<group>"; };
@@ -96,8 +104,10 @@
 				35EA711E2351DCB300199480 /* MainMapViewController.swift */,
 				351B8D5D23518A0100B0EC82 /* LoginViewController.swift */,
 				35EA712623523C6F00199480 /* HomeViewController.swift */,
+				35EA714023527C7800199480 /* InQueueViewController.swift */,
+				35EA714123527C7800199480 /* InQueueViewController.xib */,
 				35EA713123524EA700199480 /* ReasonsCollectionViewCell.swift */,
-				35EA713223524EA700199480 /* ReasonsCollectionViewCell.xib */,
+				35EA71352352599200199480 /* ProfileViewController.swift */,
 				351B8D6123518A0900B0EC82 /* xibs */,
 				351B8D522351892600B0EC82 /* Assets.xcassets */,
 				351B8D542351892600B0EC82 /* LaunchScreen.storyboard */,
@@ -110,10 +120,12 @@
 		351B8D6123518A0900B0EC82 /* xibs */ = {
 			isa = PBXGroup;
 			children = (
+				35EA713223524EA700199480 /* ReasonsCollectionViewCell.xib */,
 				35EA712323521AAF00199480 /* SignInViewController.xib */,
 				35EA711F2351DCB300199480 /* MainMapViewController.xib */,
 				351B8D5E23518A0100B0EC82 /* LoginViewController.xib */,
 				35EA712723523C6F00199480 /* HomeViewController.xib */,
+				35EA71362352599200199480 /* ProfileViewController.xib */,
 			);
 			path = xibs;
 			sourceTree = "<group>";
@@ -188,6 +200,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35EA71382352599200199480 /* ProfileViewController.xib in Resources */,
 				35EA713423524EA700199480 /* ReasonsCollectionViewCell.xib in Resources */,
 				351B8D562351892600B0EC82 /* LaunchScreen.storyboard in Resources */,
 				351B8D6323518EEE00B0EC82 /* GoogleService-Info.plist in Resources */,
@@ -196,6 +209,7 @@
 				35EA712523521AAF00199480 /* SignInViewController.xib in Resources */,
 				35EA712923523C7000199480 /* HomeViewController.xib in Resources */,
 				351B8D6023518A0100B0EC82 /* LoginViewController.xib in Resources */,
+				35EA714323527C7800199480 /* InQueueViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,6 +232,7 @@
 				"${BUILT_PRODUCTS_DIR}/Onboard/Onboard.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework",
+				"${BUILT_PRODUCTS_DIR}/WSTagsField/WSTagsField.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
@@ -234,6 +249,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Onboard.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkyFloatingLabelTextField.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WSTagsField.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
@@ -298,9 +314,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				35EA712823523C7000199480 /* HomeViewController.swift in Sources */,
+				35EA714223527C7800199480 /* InQueueViewController.swift in Sources */,
 				35EA712423521AAF00199480 /* SignInViewController.swift in Sources */,
 				35EA71202351DCB300199480 /* MainMapViewController.swift in Sources */,
 				351B8D5F23518A0100B0EC82 /* LoginViewController.swift in Sources */,
+				35EA71372352599200199480 /* ProfileViewController.swift in Sources */,
 				35EA713323524EA700199480 /* ReasonsCollectionViewCell.swift in Sources */,
 				351B8D4C2351892500B0EC82 /* AppDelegate.swift in Sources */,
 			);
