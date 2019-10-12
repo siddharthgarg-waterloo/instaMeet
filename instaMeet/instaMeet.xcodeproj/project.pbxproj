@@ -12,6 +12,12 @@
 		351B8D562351892600B0EC82 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 351B8D542351892600B0EC82 /* LaunchScreen.storyboard */; };
 		351B8D5F23518A0100B0EC82 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351B8D5D23518A0100B0EC82 /* LoginViewController.swift */; };
 		351B8D6023518A0100B0EC82 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 351B8D5E23518A0100B0EC82 /* LoginViewController.xib */; };
+		351B8D6323518EEE00B0EC82 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 351B8D6223518EEE00B0EC82 /* GoogleService-Info.plist */; };
+		35EA711D2351CFC200199480 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35EA711C2351CFC200199480 /* CoreLocation.framework */; };
+		35EA71202351DCB300199480 /* MainMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EA711E2351DCB300199480 /* MainMapViewController.swift */; };
+		35EA71212351DCB300199480 /* MainMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35EA711F2351DCB300199480 /* MainMapViewController.xib */; };
+		35EA712423521AAF00199480 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EA712223521AAF00199480 /* SignInViewController.swift */; };
+		35EA712523521AAF00199480 /* SignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35EA712323521AAF00199480 /* SignInViewController.xib */; };
 		43338F239032D0A2243DDB7D /* Pods_instaMeet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A6E0DDF24BD8B0396890F38 /* Pods_instaMeet.framework */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +29,12 @@
 		351B8D572351892600B0EC82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		351B8D5D23518A0100B0EC82 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		351B8D5E23518A0100B0EC82 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		351B8D6223518EEE00B0EC82 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		35EA711C2351CFC200199480 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		35EA711E2351DCB300199480 /* MainMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMapViewController.swift; sourceTree = "<group>"; };
+		35EA711F2351DCB300199480 /* MainMapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainMapViewController.xib; sourceTree = "<group>"; };
+		35EA712223521AAF00199480 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		35EA712323521AAF00199480 /* SignInViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignInViewController.xib; sourceTree = "<group>"; };
 		49EC8896289DA86BD66AE132 /* Pods-instaMeet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instaMeet.release.xcconfig"; path = "Target Support Files/Pods-instaMeet/Pods-instaMeet.release.xcconfig"; sourceTree = "<group>"; };
 		6A6E0DDF24BD8B0396890F38 /* Pods_instaMeet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_instaMeet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACE92BDAA85ACF748A1895F7 /* Pods-instaMeet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instaMeet.debug.xcconfig"; path = "Target Support Files/Pods-instaMeet/Pods-instaMeet.debug.xcconfig"; sourceTree = "<group>"; };
@@ -33,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35EA711D2351CFC200199480 /* CoreLocation.framework in Frameworks */,
 				43338F239032D0A2243DDB7D /* Pods_instaMeet.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -71,10 +84,13 @@
 			isa = PBXGroup;
 			children = (
 				351B8D4B2351892500B0EC82 /* AppDelegate.swift */,
+				35EA712223521AAF00199480 /* SignInViewController.swift */,
+				35EA711E2351DCB300199480 /* MainMapViewController.swift */,
 				351B8D5D23518A0100B0EC82 /* LoginViewController.swift */,
 				351B8D6123518A0900B0EC82 /* xibs */,
 				351B8D522351892600B0EC82 /* Assets.xcassets */,
 				351B8D542351892600B0EC82 /* LaunchScreen.storyboard */,
+				351B8D6223518EEE00B0EC82 /* GoogleService-Info.plist */,
 				351B8D572351892600B0EC82 /* Info.plist */,
 			);
 			path = instaMeet;
@@ -83,6 +99,8 @@
 		351B8D6123518A0900B0EC82 /* xibs */ = {
 			isa = PBXGroup;
 			children = (
+				35EA712323521AAF00199480 /* SignInViewController.xib */,
+				35EA711F2351DCB300199480 /* MainMapViewController.xib */,
 				351B8D5E23518A0100B0EC82 /* LoginViewController.xib */,
 			);
 			path = xibs;
@@ -91,6 +109,7 @@
 		A62F90DE798A80B3495D6CC8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				35EA711C2351CFC200199480 /* CoreLocation.framework */,
 				6A6E0DDF24BD8B0396890F38 /* Pods_instaMeet.framework */,
 			);
 			name = Frameworks;
@@ -158,7 +177,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				351B8D562351892600B0EC82 /* LaunchScreen.storyboard in Resources */,
+				351B8D6323518EEE00B0EC82 /* GoogleService-Info.plist in Resources */,
+				35EA71212351DCB300199480 /* MainMapViewController.xib in Resources */,
 				351B8D532351892600B0EC82 /* Assets.xcassets in Resources */,
+				35EA712523521AAF00199480 /* SignInViewController.xib in Resources */,
 				351B8D6023518A0100B0EC82 /* LoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -176,14 +198,32 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-instaMeet/Pods-instaMeet-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/Onboard/Onboard.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl_grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Onboard.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkyFloatingLabelTextField.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -243,6 +283,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35EA712423521AAF00199480 /* SignInViewController.swift in Sources */,
+				35EA71202351DCB300199480 /* MainMapViewController.swift in Sources */,
 				351B8D5F23518A0100B0EC82 /* LoginViewController.swift in Sources */,
 				351B8D4C2351892500B0EC82 /* AppDelegate.swift in Sources */,
 			);

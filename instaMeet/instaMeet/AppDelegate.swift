@@ -10,18 +10,25 @@ import UIKit
 import Onboard
 import GooglePlaces
 import GoogleMaps
+import Firebase
+import Alamofire
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-
+    
+    var ref: DatabaseReference!
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.backgroundColor = UIColor.white
         window?.makeKeyAndVisible()
+        
+        FirebaseApp.configure()
+        GMSServices.provideAPIKey("AIzaSyDsLMfmF5RfeQ_JS8edMKeprgQ4fSM7DcU")
+        GMSPlacesClient.provideAPIKey("AIzaSyDsLMfmF5RfeQ_JS8edMKeprgQ4fSM7DcU")
+        ref = Database.database().reference()
         
         let firstPage = OnboardingContentViewController(title: nil, body: nil, image: UIImage(named:"onboarding1"), buttonText: nil, action: nil)
         let secondPage = OnboardingContentViewController(title: nil, body: nil, image: UIImage(named:"onboarding2"), buttonText: nil, action: nil)
@@ -57,7 +64,35 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     
     @objc private func goToLogin() {
-        self.window?.rootViewController?.present(LoginViewController(), animated: true, completion: nil)
+        let mapVC = MainMapViewController()
+        mapVC.modalPresentationStyle = .fullScreen
+        self.window?.rootViewController?.present(mapVC, animated: true, completion: nil)
+        
+
+        
+//        self.ref.child("7682364").setValue(["Latitude": 90,"Longitude": 90, "Looking": "PTSD","NumberOfPeople":3,"Status": "false" ])
+//        Alamofire.request("https://instameeter.appspot.com/preresponse", method: .post).responseJSON { response in
+//                    print(response.request)   // original url request
+//                    print(response.response) // http url response
+//                    print(response.result)  // response
+//                    if let json = response.result.value {
+//                        print(json)
+//            }
+//        }
+        
+        
+        
+//        Alamofire.request("https://instameeter.appspot.com/response", method: .post).responseJSON { response in
+//            print(response.request)   // original url request
+//            print(response.response) // http url response
+//            print(response.result)  // response
+//            if let json = response.result.value {
+//                print(json)
+////                let new = json as! NSDictionary
+////                let high = new["highestRate"] as! Double
+//            }
+//
+//        }
     }
     
 }

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>386088625583-p0sf9mmodkug2r55d2r2dn5n0087esl2.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.386088625583-p0sf9mmodkug2r55d2r2dn5n0087esl2</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCJAhGy3A1PbGTO4TrnmbhoMx6HtxfEML4</string>
+	<key>GCM_SENDER_ID</key>
+	<string>386088625583</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>mHacks2019.instaMeet</string>
+	<key>PROJECT_ID</key>
+	<string>instameet-87f5c</string>
+	<key>STORAGE_BUCKET</key>
+	<string>instameet-87f5c.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:386088625583:ios:8ba49500ecd8b7f418bb5a</string>
+	<key>DATABASE_URL</key>
+	<string>https://instameet-87f5c.firebaseio.com</string>
+</dict>
+</plist>
