@@ -63,6 +63,9 @@
                             <rect key="frame" x="321" y="21" width="36" height="48"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" backgroundImage="profileBlack"/>
+                            <connections>
+                                <action selector="goToProfile:" destination="-1" eventType="touchUpInside" id="1Ln-5a-U44"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" red="0.94999999999999996" green="0.94999999999999996" blue="0.94999999999999996" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>

@@ -13,6 +13,11 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     @IBOutlet weak var profilePicture: UIImageView!
     let identifier = "ReasonsCollectionViewCell"
     
+    @IBAction func goToProfile(_ sender: Any) {
+        let homeVC = SentimentPopUpViewController()
+        present(homeVC, animated: true, completion: nil)
+    }
+    
     let names = ["ptsd", "climate", "alcohol", "mentalHealth", "createYourOwn"]
     
     @IBOutlet weak var reasonsToMeetCollection: UICollectionView!
@@ -50,8 +55,9 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     }
     
         func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-            //have to do this yet
-    //        self.navigationController?.pushViewController(Company(), animated: true)
+            let queueController = InQueueViewController()
+            queueController.modalPresentationStyle = .fullScreen
+            present(queueController, animated: true, completion: nil)
         }
 }
 

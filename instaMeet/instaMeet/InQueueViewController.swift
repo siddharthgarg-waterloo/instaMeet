@@ -23,6 +23,8 @@ class InQueueViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let ref = Database.database().reference().child("7682364")
+        ref.updateChildValues(["Status": "True" ])
         timerFunction()
     }
     
@@ -31,8 +33,6 @@ class InQueueViewController: UIViewController {
     }
     
     @objc func hitTheServer() {
-        let ref = Database.database().reference().child("27567")
-        ref.updateChildValues(["Status": "True" ])
         Alamofire.request("https://instameeter.appspot.com/preresponse", method: .post).responseJSON { response in
                     print(response.request)   // original url request
                     print(response.response) // http url response
