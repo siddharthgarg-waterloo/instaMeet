@@ -22,6 +22,9 @@
                     <rect key="frame" x="80" y="443" width="254" height="62"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" backgroundImage="Sign In Button"/>
+                    <connections>
+                        <action selector="goToHomePageViewController:" destination="-1" eventType="touchUpInside" id="Aiy-yM-giZ"/>
+                    </connections>
                 </button>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Homepage-top" translatesAutoresizingMaskIntoConstraints="NO" id="x0g-t5-Ufo">
                     <rect key="frame" x="0.0" y="-7" width="414" height="153"/>
@@ -34,6 +37,16 @@
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dsq-ub-kbA">
+                    <rect key="frame" x="80" y="513" width="254" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Don't have an account? Sign Up.">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="goToLoginViewController:" destination="-1" eventType="touchUpInside" id="ZuY-Qp-uOX"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>

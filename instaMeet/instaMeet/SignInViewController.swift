@@ -11,9 +11,24 @@ import SkyFloatingLabelTextField
 
 class SignInViewController: UIViewController {
 
+    @IBAction func goToLoginViewController(_ sender: Any) {
+        let logInVC = LoginViewController()
+        logInVC.modalPresentationStyle = .fullScreen
+        present(logInVC, animated: true, completion: nil)
+    }
+    @IBAction func goToHomePageViewController(_ sender: Any) {
+        let homeVC = HomeViewController()
+        homeVC.image = image
+        homeVC.modalPresentationStyle = .fullScreen
+        present(homeVC, animated: true, completion: nil)
+    }
+    
+    var image: UIImage? = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
+
         
         let highlightColor = UIColor(red:0.58, green:0.78, blue:0.84, alpha:1.0)
         
@@ -34,6 +49,7 @@ class SignInViewController: UIViewController {
         passwordtextField.title = "Password"
         
         passwordtextField.tintColor = highlightColor
+        passwordtextField.isSecureTextEntry = true
         passwordtextField.textColor = UIColor.black
         passwordtextField.lineColor = highlightColor
         passwordtextField.titleColor = highlightColor

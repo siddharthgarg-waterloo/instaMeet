@@ -19,6 +19,10 @@ class MainMapViewController: UIViewController, CLLocationManagerDelegate, MKMapV
     
     var address: String = ""
     var name: String = ""
+    var image: UIImage? = nil
+    
+    @IBOutlet weak var addressPlace: UILabel!
+    @IBOutlet weak var namePlace: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +31,9 @@ class MainMapViewController: UIViewController, CLLocationManagerDelegate, MKMapV
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
         locationManager.requestLocation()
+        
+        namePlace.text = name
+        addressPlace.text = address
         
         mapView.showsUserLocation = true
         request.naturalLanguageQuery = address

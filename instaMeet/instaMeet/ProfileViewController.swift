@@ -10,7 +10,17 @@ import UIKit
 import WSTagsField
 
 class ProfileViewController: UIViewController, UITextViewDelegate {
+
+    @IBAction func goToHomeViewController(_ sender: Any) {
+        let homeVC = HomeViewController()
+        homeVC.modalPresentationStyle = .fullScreen
+        homeVC.image = image
+        present(homeVC, animated: true, completion: nil)
+    }
     
+    var image: UIImage? = nil
+    
+    @IBOutlet weak var profilePicture: UIImageView!
     fileprivate let tagsField = WSTagsField()
     @IBOutlet weak var moreInformation: UITextView!
     
@@ -18,6 +28,10 @@ class ProfileViewController: UIViewController, UITextViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
+        
+        if let givenImage = image {
+            profilePicture.maskCircle(anyImage: givenImage)
+        }
         
         moreInformation.delegate = self
         

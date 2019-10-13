@@ -57,6 +57,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
             let queueController = InQueueViewController()
             queueController.modalPresentationStyle = .fullScreen
+            queueController.image = image
             present(queueController, animated: true, completion: nil)
         }
 }

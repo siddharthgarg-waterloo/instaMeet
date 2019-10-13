@@ -11,6 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileViewController" customModule="instaMeet" customModuleProvider="target">
             <connections>
                 <outlet property="moreInformation" destination="3nt-dU-kYE" id="Tcd-uw-W6z"/>
+                <outlet property="profilePicture" destination="Lx0-tZ-RJy" id="t0x-pU-74b"/>
                 <outlet property="tagsView" destination="mgw-Lo-dQ5" id="JU6-YG-AH7"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -76,6 +77,9 @@
                     <rect key="frame" x="80" y="719" width="254" height="62"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" backgroundImage="saveAndContinue"/>
+                    <connections>
+                        <action selector="goToHomeViewController:" destination="-1" eventType="touchUpInside" id="327-Qn-MbP"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

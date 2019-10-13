@@ -11,14 +11,22 @@ import SkyFloatingLabelTextField
 
 class LoginViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
+    @IBAction func goToSignIn(_ sender: Any) {
+        let signInVC = SignInViewController()
+        signInVC.image = chosenImage
+        signInVC.modalPresentationStyle = .fullScreen
+        present(signInVC, animated: true, completion: nil)
+    }
+    
     @IBOutlet weak var profilePictureUpload: UIButton!
     
-    @IBAction func goToHomeViewController(_ sender: Any) {
-        let homeVC = HomeViewController()
-        homeVC.image = chosenImage
-        homeVC.modalPresentationStyle = .fullScreen
-        present(homeVC, animated: true, completion: nil)
+    @IBAction func goToProfilePageViewController(_ sender: Any) {
+        let profileVC = ProfileViewController()
+        profileVC.image = chosenImage
+        profileVC.modalPresentationStyle = .fullScreen
+        present(profileVC, animated: true, completion: nil)
     }
+    
     let imagePicker = UIImagePickerController()
     var chosenImage: UIImage? = nil
     
@@ -61,6 +69,7 @@ class LoginViewController: UIViewController, UIImagePickerControllerDelegate, UI
         passwordtextField.titleColor = highlightColor
         passwordtextField.selectedTitleColor = highlightColor
         passwordtextField.selectedLineColor = highlightColor
+        passwordtextField.isSecureTextEntry = true
         self.view.addSubview(passwordtextField)
         
         let locationtextField = SkyFloatingLabelTextField(frame: CGRect(x: 47, y: 560, width: 300, height: 45))

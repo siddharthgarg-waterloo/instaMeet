@@ -14,10 +14,12 @@ import Alamofire
 class InQueueViewController: UIViewController {
     
     var timerTest : Timer?
+    var image: UIImage? = nil
 
     @IBAction func goToHomeViewController(_ sender: Any) {
         let homeVC = HomeViewController()
         homeVC.modalPresentationStyle = .fullScreen
+        homeVC.image = image
         present(homeVC, animated: true, completion: nil)
     }
     
@@ -48,6 +50,7 @@ class InQueueViewController: UIViewController {
                                 mapVC.name = name
                                 mapVC.address = address
                                 mapVC.modalPresentationStyle = .fullScreen
+                                mapVC.image = self.image
                                 self.present(mapVC, animated: true, completion: nil)
                             }
                         } else {
