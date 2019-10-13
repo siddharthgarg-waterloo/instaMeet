@@ -9,7 +9,7 @@
 import UIKit
 import WSTagsField
 
-class ProfileViewController: UIViewController {
+class ProfileViewController: UIViewController, UITextViewDelegate {
     
     fileprivate let tagsField = WSTagsField()
     @IBOutlet weak var moreInformation: UITextView!
@@ -17,12 +17,17 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var tagsView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
+        
+        moreInformation.delegate = self
         
         moreInformation.clipsToBounds = true
         moreInformation.backgroundColor = .white
         moreInformation.layer.cornerRadius = 10
         moreInformation.layer.borderWidth = 1
         moreInformation.layer.borderColor = UIColor.darkGray.cgColor
+        moreInformation.text = "Looking to meet new people with a similar mind set."
+        moreInformation.textColor = UIColor.lightGray
         
         tagsField.frame = tagsView.bounds
         tagsView.addSubview(tagsField)
@@ -46,6 +51,20 @@ class ProfileViewController: UIViewController {
         tagsField.acceptTagOption = .space
         
         textFieldEvents()
+    }
+    
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if textView.textColor == UIColor.lightGray {
+            textView.text = nil
+            textView.textColor = UIColor.black
+        }
+    }
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if textView.text.isEmpty {
+            textView.text = "Looking to meet new people with a similar mind set."
+            textView.textColor = UIColor.lightGray
+        }
     }
 
 }

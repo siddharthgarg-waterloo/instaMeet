@@ -12,6 +12,8 @@ import Alamofire
 
 
 class InQueueViewController: UIViewController {
+    
+    var timerTest : Timer?
 
     @IBAction func goToHomeViewController(_ sender: Any) {
         let homeVC = HomeViewController()
@@ -21,30 +23,39 @@ class InQueueViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        DispatchQueue.main.asyncAfter(deadline: .now(), execute: {
-                    let ref = Database.database().reference().child("27567")
-                    ref.updateChildValues(["Status": "True" ])
-                    Alamofire.request("https://instameeter.appspot.com/preresponse", method: .post).responseJSON { response in
-                                print(response.request)   // original url request
-                                print(response.response) // http url response
-                                print(response.result)  // response
-                                if let json = response.result.value {
-                                    let new = json as! NSDictionary
-                                    if let address = new["address"] as? String,
-                                        let name = new["name"] as? String {
-                                        print(name)
-                                        let mapVC = MainMapViewController()
-                                        mapVC.name = name
-                                        mapVC.address = address
-                                        mapVC.modalPresentationStyle = .fullScreen
-                                        self.present(mapVC, animated: true, completion: nil)
-                                    }
-                        }
-                    }
-        })
-        
-
+        timerFunction()
     }
-
+    
+    func timerFunction() {
+        timerTest = Timer.scheduledTimer(timeInterval: 1.5, target: self, selector: #selector(hitTheServer), userInfo: nil, repeats: true)
+    }
+    
+    @objc func hitTheServer() {
+        let ref = Database.database().reference().child("27567")
+        ref.updateChildValues(["Status": "True" ])
+        Alamofire.request("https://instameeter.appspot.com/preresponse", method: .post).responseJSON { response in
+                    print(response.request)   // original url request
+                    print(response.response) // http url response
+                    print(response.result)  // response
+                    if let json = response.result.value {
+                        if let new = json as? NSDictionary {
+                            if let address = new["address"] as? String,
+                                let name = new["name"] as? String {
+                                print(name)
+                                self.timerTest?.invalidate()
+                                self.timerTest = nil
+                                let mapVC = MainMapViewController()
+                                mapVC.name = name
+                                mapVC.address = address
+                                mapVC.modalPresentationStyle = .fullScreen
+                                self.present(mapVC, animated: true, completion: nil)
+                            }
+                        } else {
+                            return
+                        }
+            }
+        }
+    }
 }
+
+
