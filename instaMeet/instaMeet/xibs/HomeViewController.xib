@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="instaMeet" customModuleProvider="target">
             <connections>
+                <outlet property="home" destination="ckT-Xo-5V0" id="sAj-dD-M6e"/>
                 <outlet property="profilePicture" destination="081-Hb-6CG" id="7lB-uV-Q4f"/>
                 <outlet property="reasonsToMeetCollection" destination="hTN-ZJ-p4m" id="cnv-hp-Ejx"/>
                 <outlet property="searchScreen" destination="KqM-gZ-Ggq" id="Z50-wf-KSr"/>

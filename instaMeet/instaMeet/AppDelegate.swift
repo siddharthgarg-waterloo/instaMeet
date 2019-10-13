@@ -64,9 +64,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     
     @objc private func goToLogin() {
-        let mapVC = LoginViewController()
-        mapVC.modalPresentationStyle = .fullScreen
-        self.window?.rootViewController?.present(mapVC, animated: true, completion: nil)
+        let loginVC = LoginViewController()
+        loginVC.modalPresentationStyle = .fullScreen
+        self.window?.rootViewController?.present(loginVC, animated: true, completion: nil)
     }
     
 }

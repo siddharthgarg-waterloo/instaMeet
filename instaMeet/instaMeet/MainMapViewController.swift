@@ -17,6 +17,14 @@ class MainMapViewController: UIViewController, CLLocationManagerDelegate, MKMapV
     let locationPin = MKPointAnnotation()
     @IBOutlet weak var meetUpinformation: UIView!
     
+    @IBAction func goToHomeViewController(_ sender: Any) {
+        let homeVC = HomeViewController()
+        homeVC.modalPresentationStyle = .fullScreen
+        homeVC.image = image
+        homeVC.needToPresentSentimentPopUp = true
+        present(homeVC, animated: true, completion: nil)
+    }
+    
     var address: String = ""
     var name: String = ""
     var image: UIImage? = nil

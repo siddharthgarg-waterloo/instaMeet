@@ -14,9 +14,15 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     let identifier = "ReasonsCollectionViewCell"
     
     @IBAction func goToProfile(_ sender: Any) {
-        let homeVC = SentimentPopUpViewController()
-        present(homeVC, animated: true, completion: nil)
+        let settingVC = SettingsViewController()
+        settingVC.modalPresentationStyle = .fullScreen
+        settingVC.image = image
+        present(settingVC, animated: true, completion: nil)
     }
+
+    @IBOutlet weak var home: UIButton!
+    
+    var needToPresentSentimentPopUp: Bool? = nil 
     
     let names = ["ptsd", "climate", "alcohol", "mentalHealth", "createYourOwn"]
     
@@ -26,6 +32,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     @IBOutlet weak var searchScreen: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
+        home.isEnabled = false
         self.hideKeyboardWhenTappedAround()
         if let givenImage = image {
             profilePicture.maskCircle(anyImage: givenImage)
@@ -37,6 +44,15 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         reasonsToMeetCollection.dataSource = self
         let nibCell = UINib(nibName: identifier, bundle: nil)
         reasonsToMeetCollection.register(nibCell, forCellWithReuseIdentifier: identifier)
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        if (needToPresentSentimentPopUp == true) {
+            let sentimentVC = SentimentPopUpViewController()
+            self.present(sentimentVC, animated: true, completion: nil)
+            needToPresentSentimentPopUp = nil
+        }
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {

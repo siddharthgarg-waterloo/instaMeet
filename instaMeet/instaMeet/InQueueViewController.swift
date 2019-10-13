@@ -18,6 +18,8 @@ class InQueueViewController: UIViewController {
 
     @IBAction func goToHomeViewController(_ sender: Any) {
         let homeVC = HomeViewController()
+        self.timerTest?.invalidate()
+        self.timerTest = nil
         homeVC.modalPresentationStyle = .fullScreen
         homeVC.image = image
         present(homeVC, animated: true, completion: nil)
@@ -25,7 +27,7 @@ class InQueueViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let ref = Database.database().reference().child("7682364")
+        let ref = Database.database().reference().child("27567")
         ref.updateChildValues(["Status": "True" ])
         timerFunction()
     }
@@ -36,8 +38,8 @@ class InQueueViewController: UIViewController {
     
     @objc func hitTheServer() {
         Alamofire.request("https://instameeter.appspot.com/preresponse", method: .post).responseJSON { response in
-                    print(response.request)   // original url request
-                    print(response.response) // http url response
+            print(response.request as Any)   // original url request
+            print(response.response as Any) // http url response
                     print(response.result)  // response
                     if let json = response.result.value {
                         if let new = json as? NSDictionary {

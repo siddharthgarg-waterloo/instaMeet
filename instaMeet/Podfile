@@ -20,5 +20,6 @@ pod 'GoogleMaps'
 pod 'SkyFloatingLabelTextField', '~> 3.0'
 pod 'GooglePlaces'
 pod "WSTagsField"
+pod "SwiftChart"
 
 end

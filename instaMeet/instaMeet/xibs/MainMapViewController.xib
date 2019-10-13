@@ -90,6 +90,14 @@
                             <rect key="frame" x="275" y="155" width="120" height="25"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hOc-h3-OXh">
+                            <rect key="frame" x="19" y="220" width="120" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" backgroundImage="leave"/>
+                            <connections>
+                                <action selector="goToHomeViewController:" destination="-1" eventType="touchUpInside" id="hyD-xe-3eQ"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <viewLayoutGuide key="safeArea" id="8ua-U0-KXv"/>
@@ -102,6 +110,7 @@
     </objects>
     <resources>
         <image name="callGroup" width="476" height="96"/>
+        <image name="leave" width="536" height="96"/>
         <image name="messageGroup" width="476" height="96"/>
     </resources>
 </document>

@@ -28,6 +28,8 @@
 		35EA714323527C7800199480 /* InQueueViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35EA714123527C7800199480 /* InQueueViewController.xib */; };
 		35EA714D2352B33500199480 /* SentimentPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EA714B2352B33500199480 /* SentimentPopUpViewController.swift */; };
 		35EA714E2352B33500199480 /* SentimentPopUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35EA714C2352B33500199480 /* SentimentPopUpViewController.xib */; };
+		35EA71512352E91300199480 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EA714F2352E91200199480 /* SettingsViewController.swift */; };
+		35EA71522352E91300199480 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35EA71502352E91200199480 /* SettingsViewController.xib */; };
 		43338F239032D0A2243DDB7D /* Pods_instaMeet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A6E0DDF24BD8B0396890F38 /* Pods_instaMeet.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +57,8 @@
 		35EA714123527C7800199480 /* InQueueViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InQueueViewController.xib; sourceTree = "<group>"; };
 		35EA714B2352B33500199480 /* SentimentPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentimentPopUpViewController.swift; sourceTree = "<group>"; };
 		35EA714C2352B33500199480 /* SentimentPopUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SentimentPopUpViewController.xib; sourceTree = "<group>"; };
+		35EA714F2352E91200199480 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		35EA71502352E91200199480 /* SettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
 		49EC8896289DA86BD66AE132 /* Pods-instaMeet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instaMeet.release.xcconfig"; path = "Target Support Files/Pods-instaMeet/Pods-instaMeet.release.xcconfig"; sourceTree = "<group>"; };
 		6A6E0DDF24BD8B0396890F38 /* Pods_instaMeet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_instaMeet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACE92BDAA85ACF748A1895F7 /* Pods-instaMeet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instaMeet.debug.xcconfig"; path = "Target Support Files/Pods-instaMeet/Pods-instaMeet.debug.xcconfig"; sourceTree = "<group>"; };
@@ -116,6 +120,8 @@
 				35EA71352352599200199480 /* ProfileViewController.swift */,
 				351B8D6123518A0900B0EC82 /* xibs */,
 				351B8D522351892600B0EC82 /* Assets.xcassets */,
+				35EA714F2352E91200199480 /* SettingsViewController.swift */,
+				35EA71502352E91200199480 /* SettingsViewController.xib */,
 				351B8D542351892600B0EC82 /* LaunchScreen.storyboard */,
 				351B8D6223518EEE00B0EC82 /* GoogleService-Info.plist */,
 				351B8D572351892600B0EC82 /* Info.plist */,
@@ -213,6 +219,7 @@
 				35EA71212351DCB300199480 /* MainMapViewController.xib in Resources */,
 				35EA714E2352B33500199480 /* SentimentPopUpViewController.xib in Resources */,
 				351B8D532351892600B0EC82 /* Assets.xcassets in Resources */,
+				35EA71522352E91300199480 /* SettingsViewController.xib in Resources */,
 				35EA712523521AAF00199480 /* SignInViewController.xib in Resources */,
 				35EA712923523C7000199480 /* HomeViewController.xib in Resources */,
 				351B8D6023518A0100B0EC82 /* LoginViewController.xib in Resources */,
@@ -239,6 +246,7 @@
 				"${BUILT_PRODUCTS_DIR}/Onboard/Onboard.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftChart/SwiftChart.framework",
 				"${BUILT_PRODUCTS_DIR}/WSTagsField/WSTagsField.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
@@ -256,6 +264,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Onboard.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkyFloatingLabelTextField.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftChart.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WSTagsField.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
@@ -323,6 +332,7 @@
 				35EA712823523C7000199480 /* HomeViewController.swift in Sources */,
 				35EA714D2352B33500199480 /* SentimentPopUpViewController.swift in Sources */,
 				35EA714223527C7800199480 /* InQueueViewController.swift in Sources */,
+				35EA71512352E91300199480 /* SettingsViewController.swift in Sources */,
 				35EA712423521AAF00199480 /* SignInViewController.swift in Sources */,
 				35EA71202351DCB300199480 /* MainMapViewController.swift in Sources */,
 				351B8D5F23518A0100B0EC82 /* LoginViewController.swift in Sources */,

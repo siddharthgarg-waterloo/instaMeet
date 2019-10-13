@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "883AE46256EDAC01C9868002C3E8AB0C"
+               BlueprintIdentifier = "A24BD08072EFFC2D35D1DECB8D0F3BD0"
                BuildableName = "WSTagsField.framework"
                BlueprintName = "WSTagsField"
                ReferencedContainer = "container:Pods.xcodeproj">

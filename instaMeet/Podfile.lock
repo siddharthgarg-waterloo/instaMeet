@@ -120,6 +120,7 @@ PODS:
   - Onboard (2.3.3)
   - Protobuf (3.7.0)
   - SkyFloatingLabelTextField (3.6.0)
+  - SwiftChart (1.0.1)
   - WSTagsField (4.1.0)
 
 DEPENDENCIES:
@@ -133,6 +134,7 @@ DEPENDENCIES:
   - GooglePlaces
   - Onboard
   - SkyFloatingLabelTextField (~> 3.0)
+  - SwiftChart
   - WSTagsField
 
 SPEC REPOS:
@@ -159,6 +161,7 @@ SPEC REPOS:
     - Onboard
     - Protobuf
     - SkyFloatingLabelTextField
+    - SwiftChart
     - WSTagsField
 
 SPEC CHECKSUMS:
@@ -184,8 +187,9 @@ SPEC CHECKSUMS:
   Onboard: 4d6e943e20bdd6bc229df967a347dd7514bc2a6f
   Protobuf: 7a877b7f3e5964e3fce995e2eb323dbc6831bb5a
   SkyFloatingLabelTextField: 38164979b79512f9ff9288ad8acfc4bbf5d843e3
+  SwiftChart: ba767a678d568a5ee22d419e146a0582865e1aff
   WSTagsField: 269da4be929d8945adf7195e3822b70826c1c1a4
 
-PODFILE CHECKSUM: 3521e837934852e5d7cae6d6e498cbabdf4d2cd9
+PODFILE CHECKSUM: c508dd3341e3bb62091c0ef198ccc1c58d839ea6
 
 COCOAPODS: 1.6.1
