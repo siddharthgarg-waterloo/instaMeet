@@ -27,7 +27,7 @@ class InQueueViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let ref = Database.database().reference().child("27567")
+        let ref = Database.database().reference().child("7682364")
         ref.updateChildValues(["Status": "True" ])
         timerFunction()
     }
@@ -44,13 +44,18 @@ class InQueueViewController: UIViewController {
                     if let json = response.result.value {
                         if let new = json as? NSDictionary {
                             if let address = new["address"] as? String,
-                                let name = new["name"] as? String {
+                                let name = new["name"] as? String,
+                                let array = new["final_long_lat"] as? [Double] {
+                                let long = array[0]
+                                let lat = array[1]
                                 print(name)
                                 self.timerTest?.invalidate()
                                 self.timerTest = nil
                                 let mapVC = MainMapViewController()
                                 mapVC.name = name
                                 mapVC.address = address
+                                mapVC.lat = lat
+                                mapVC.long = long
                                 mapVC.modalPresentationStyle = .fullScreen
                                 mapVC.image = self.image
                                 self.present(mapVC, animated: true, completion: nil)

@@ -28,6 +28,8 @@ class MainMapViewController: UIViewController, CLLocationManagerDelegate, MKMapV
     var address: String = ""
     var name: String = ""
     var image: UIImage? = nil
+    var lat: Double = 0
+    var long: Double = 0
     
     @IBOutlet weak var addressPlace: UILabel!
     @IBOutlet weak var namePlace: UILabel!
@@ -61,7 +63,7 @@ class MainMapViewController: UIViewController, CLLocationManagerDelegate, MKMapV
                         self.mapView.addAnnotation(self.locationPin)
                         
                         let request: MKDirections.Request = MKDirections.Request()
-                        request.destination = MKMapItem(placemark: location.placemark)
+                        request.destination = MKMapItem(placemark: MKPlacemark(coordinate: CLLocationCoordinate2D(latitude: CLLocationDegrees(exactly: self.lat)!, longitude: CLLocationDegrees(exactly: self.long)!)))
                         request.source = MKMapItem(placemark: MKPlacemark(coordinate: self.locationManager.location!.coordinate))
                         request.transportType = .automobile
                         

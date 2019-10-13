@@ -24,7 +24,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     var needToPresentSentimentPopUp: Bool? = nil 
     
-    let names = ["ptsd", "climate", "alcohol", "mentalHealth", "createYourOwn"]
+    let names = ["ptsd", "depression", "alcohol", "mentalHealth", "createYourOwn"]
     
     @IBOutlet weak var reasonsToMeetCollection: UICollectionView!
     var image: UIImage? = nil
