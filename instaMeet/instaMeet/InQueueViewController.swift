@@ -27,7 +27,7 @@ class InQueueViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let ref = Database.database().reference().child("7682364")
+        let ref = Database.database().reference().child("27567")
         ref.updateChildValues(["Status": "True" ])
         timerFunction()
     }
