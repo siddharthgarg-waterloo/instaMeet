@@ -1,6 +1,6 @@
 # InstaMeet
 
-![image](http://cubeupload.com/im/coding_ninja24/mergefromofoct2.jpg)
+![image](https://u.cubeupload.com/coding_ninja24/mergefromofoct2.jpg)
 
 ## Project Description
 
