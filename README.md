@@ -31,9 +31,11 @@ After meeting others, the users can choose to write a short sentence on their ex
 ## Challenges we ran into
 
 **Design/Development** - Difficult to integrate beautiful complex designs into the front end given the time constraints
+
 **Google API** - Difficult integration due to difficult to comprehend documentation
 
 ## What's next for HealthLine
 
 **Chat Feature** - allowing users to call/video call other users
+
 **Additional Sentimental Analysis** - to better comprehend where we can help the users
