@@ -38,7 +38,7 @@ https://youtu.be/UlfJgO73ILY
 
 **Google API** - Difficult integration due to difficult to comprehend documentation
 
-## What's next for HealthLine
+## What's next for InstaMeet
 
 **Chat Feature** - allowing users to call/video call other users
 
