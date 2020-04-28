@@ -16,6 +16,10 @@ After meeting others, the users can choose to write a short sentence on their ex
 
 **Core Features** - Instantaneous meetup at an optimal location(using Google Engine), Feedback Sentiment Analysis and Tracking(for user and product managers to better develop the product)
 
+## Video Demo
+
+https://youtu.be/UlfJgO73ILY
+
 ## How we built it
 
 **Swift 5** - iOS app
