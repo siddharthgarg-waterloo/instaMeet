@@ -12,13 +12,22 @@ import WSTagsField
 class ProfileViewController: UIViewController, UITextViewDelegate {
 
     @IBAction func goToHomeViewController(_ sender: Any) {
-        let homeVC = HomeViewController()
-        homeVC.modalPresentationStyle = .fullScreen
-        homeVC.image = image
-        present(homeVC, animated: true, completion: nil)
+        if (moreInformation.text == "" || tagsField.tags.count == 0) {
+            let alert = UIAlertController(title: "Error", message: "Please fill in all the fields before proceeding.", preferredStyle: .alert)
+                       alert.addAction(UIAlertAction(title: "Okay", style: .default, handler: nil))
+
+                       self.present(alert, animated: true)
+        } else {
+            let homeVC = HomeViewController()
+            homeVC.modalPresentationStyle = .fullScreen
+            homeVC.image = image
+            present(homeVC, animated: true, completion: nil)
+        }
     }
+    @IBOutlet weak var welcomeLabel: UILabel!
     
     var image: UIImage? = nil
+    var name: String = ""
     
     @IBOutlet weak var profilePicture: UIImageView!
     fileprivate let tagsField = WSTagsField()
@@ -45,6 +54,8 @@ class ProfileViewController: UIViewController, UITextViewDelegate {
         
         tagsField.frame = tagsView.bounds
         tagsView.addSubview(tagsField)
+        
+        welcomeLabel.text = "Welcome, " + name + "!"
         
         tagsField.placeholder = "🔍 Ex. Camping, Video Gaming, Cooking ... etc."
         

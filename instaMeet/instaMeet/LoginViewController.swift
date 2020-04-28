@@ -19,12 +19,27 @@ class LoginViewController: UIViewController, UIImagePickerControllerDelegate, UI
     }
     
     @IBOutlet weak var profilePictureUpload: UIButton!
+    let fullNametextField = SkyFloatingLabelTextField(frame: CGRect(x: 47, y: 350, width: 300, height: 45))
+    let emailtextField = SkyFloatingLabelTextField(frame: CGRect(x: 47, y: 420, width: 300, height: 45))
+    let passwordtextField = SkyFloatingLabelTextField(frame: CGRect(x: 47, y: 490, width: 300, height: 45))
+    
     
     @IBAction func goToProfilePageViewController(_ sender: Any) {
-        let profileVC = ProfileViewController()
-        profileVC.image = chosenImage
-        profileVC.modalPresentationStyle = .fullScreen
-        present(profileVC, animated: true, completion: nil)
+        if (fullNametextField.text == "" || emailtextField.text == "" || passwordtextField.text == "") {
+            
+            let alert = UIAlertController(title: "Error", message: "Please fill in all the fields before proceeding.", preferredStyle: .alert)
+
+            alert.addAction(UIAlertAction(title: "Okay", style: .default, handler: nil))
+
+            self.present(alert, animated: true)
+            
+        } else {
+            let profileVC = ProfileViewController()
+            profileVC.image = chosenImage
+            profileVC.modalPresentationStyle = .fullScreen
+            profileVC.name = fullNametextField.text ?? ""
+            present(profileVC, animated: true, completion: nil)
+        }
     }
     
     let imagePicker = UIImagePickerController()
@@ -35,7 +50,7 @@ class LoginViewController: UIViewController, UIImagePickerControllerDelegate, UI
         self.hideKeyboardWhenTappedAround()
         let highlightColor = UIColor(red:0.58, green:0.78, blue:0.84, alpha:1.0)
         
-        let fullNametextField = SkyFloatingLabelTextField(frame: CGRect(x: 47, y: 350, width: 300, height: 45))
+
         fullNametextField.placeholder = "Full Name"
         fullNametextField.title = "Full Name"
         
@@ -47,7 +62,7 @@ class LoginViewController: UIViewController, UIImagePickerControllerDelegate, UI
         fullNametextField.selectedLineColor = highlightColor
         self.view.addSubview(fullNametextField)
         
-        let emailtextField = SkyFloatingLabelTextField(frame: CGRect(x: 47, y: 420, width: 300, height: 45))
+        
         emailtextField.placeholder = "What's your email?"
         emailtextField.title = "What's your email?"
         
@@ -59,7 +74,6 @@ class LoginViewController: UIViewController, UIImagePickerControllerDelegate, UI
         emailtextField.selectedLineColor = highlightColor
         self.view.addSubview(emailtextField)
         
-        let passwordtextField = SkyFloatingLabelTextField(frame: CGRect(x: 47, y: 490, width: 300, height: 45))
         passwordtextField.placeholder = "Create a password"
         passwordtextField.title = "Create a password"
         
@@ -71,18 +85,6 @@ class LoginViewController: UIViewController, UIImagePickerControllerDelegate, UI
         passwordtextField.selectedLineColor = highlightColor
         passwordtextField.isSecureTextEntry = true
         self.view.addSubview(passwordtextField)
-        
-        let locationtextField = SkyFloatingLabelTextField(frame: CGRect(x: 47, y: 560, width: 300, height: 45))
-        locationtextField.placeholder = "Where are you located?"
-        locationtextField.title = "Where are you located?"
-        
-        locationtextField.tintColor = highlightColor
-        locationtextField.textColor = UIColor.black
-        locationtextField.lineColor = highlightColor
-        locationtextField.titleColor = highlightColor
-        locationtextField.selectedTitleColor = highlightColor
-        locationtextField.selectedLineColor = highlightColor
-        self.view.addSubview(locationtextField)
         
         profilePictureUpload.backgroundColor = UIColor.clear
         profilePictureUpload.layer.cornerRadius = profilePictureUpload.frame.size.width/2

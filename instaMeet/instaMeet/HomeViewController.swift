@@ -24,7 +24,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     var needToPresentSentimentPopUp: Bool? = nil 
     
-    let names = ["ptsd", "depression", "alcohol", "mentalHealth", "createYourOwn"]
+    let names = ["ptsd", "depression", "alcoholism", "mentalHealth", "createYourOwn"]
     
     @IBOutlet weak var reasonsToMeetCollection: UICollectionView!
     var image: UIImage? = nil
@@ -71,10 +71,11 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     }
     
         func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-            let queueController = InQueueViewController()
-            queueController.modalPresentationStyle = .fullScreen
-            queueController.image = image
-            present(queueController, animated: true, completion: nil)
+                let queueController = InQueueViewController()
+                queueController.modalPresentationStyle = .fullScreen
+            queueController.chosen = names[indexPath.row]
+                queueController.image = image
+                present(queueController, animated: true, completion: nil)
         }
 }
 

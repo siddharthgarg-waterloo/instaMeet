@@ -8,14 +8,17 @@
 
 import UIKit
 import MapKit
+import MessageUI
+import Messages
 
-class MainMapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
+class MainMapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate, MFMessageComposeViewControllerDelegate {
     
     let locationManager = CLLocationManager()
     @IBOutlet weak var mapView: MKMapView!
     let request = MKLocalSearch.Request()
     let locationPin = MKPointAnnotation()
     @IBOutlet weak var meetUpinformation: UIView!
+    var chosen: String = ""
     
     @IBAction func goToHomeViewController(_ sender: Any) {
         let homeVC = HomeViewController()
@@ -34,6 +37,7 @@ class MainMapViewController: UIViewController, CLLocationManagerDelegate, MKMapV
     @IBOutlet weak var addressPlace: UILabel!
     @IBOutlet weak var namePlace: UILabel!
     
+    @IBOutlet weak var informationLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
@@ -41,6 +45,8 @@ class MainMapViewController: UIViewController, CLLocationManagerDelegate, MKMapV
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
         locationManager.requestLocation()
+        
+        informationLabel.text = chosen.uppercased() + " Support Group"
         
         namePlace.text = name
         addressPlace.text = address
@@ -64,8 +70,9 @@ class MainMapViewController: UIViewController, CLLocationManagerDelegate, MKMapV
                         
                         let request: MKDirections.Request = MKDirections.Request()
                         request.destination = MKMapItem(placemark: MKPlacemark(coordinate: CLLocationCoordinate2D(latitude: CLLocationDegrees(exactly: self.lat)!, longitude: CLLocationDegrees(exactly: self.long)!)))
-                        request.source = MKMapItem(placemark: MKPlacemark(coordinate: self.locationManager.location!.coordinate))
-                        request.transportType = .automobile
+//                        request.source = MKMapItem(placemark: MKPlacemark(coordinate: self.locationManager.location!.coordinate))
+                        request.source = MKMapItem(placemark: MKPlacemark(coordinate: CLLocationCoordinate2D(latitude: CLLocationDegrees(exactly: 42.2694159)!, longitude: CLLocationDegrees(exactly: -83.7422736)!)))
+                        request.transportType = .walking
                         
                         let directions = MKDirections(request: request)
                             directions.calculate { (response, error) in
@@ -95,6 +102,21 @@ class MainMapViewController: UIViewController, CLLocationManagerDelegate, MKMapV
         meetUpinformation.layer.masksToBounds = true
         
         self.mapView.delegate = self
+    }
+    
+    @IBAction func sendText(sender: UIButton) {
+        if (MFMessageComposeViewController.canSendText()) {
+            let controller = MFMessageComposeViewController()
+            controller.body = "Message Body"
+            controller.recipients = ["3232141421"]
+            controller.messageComposeDelegate = self
+            self.present(controller, animated: true, completion: nil)
+        }
+    }
+
+    func messageComposeViewController(_ controller: MFMessageComposeViewController, didFinishWith result: MessageComposeResult) {
+        //... handle sms screen actions
+        self.dismiss(animated: true, completion: nil)
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {

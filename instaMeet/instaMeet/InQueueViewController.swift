@@ -15,6 +15,7 @@ class InQueueViewController: UIViewController {
     
     var timerTest : Timer?
     var image: UIImage? = nil
+    var chosen: String = ""
 
     @IBAction func goToHomeViewController(_ sender: Any) {
         let homeVC = HomeViewController()
@@ -27,7 +28,7 @@ class InQueueViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let ref = Database.database().reference().child("27567")
+        let ref = Database.database().reference().child("7682364")
         ref.updateChildValues(["Status": "True" ])
         timerFunction()
     }
@@ -52,6 +53,7 @@ class InQueueViewController: UIViewController {
                                 self.timerTest?.invalidate()
                                 self.timerTest = nil
                                 let mapVC = MainMapViewController()
+                                mapVC.chosen = self.chosen
                                 mapVC.name = name
                                 mapVC.address = address
                                 mapVC.lat = lat
