@@ -14,7 +14,7 @@ The app differs from traditional support groups, as the app allows on-demand/ins
 
 After meeting others, the users can choose to write a short sentence on their experiences. Overtime, these sentiment analysis will be cumulated to give overall insight on the mood of the user, and how it may have changed overtime. 
 
-**Core Features** - Instantaneous meetup at an optimal location(using Google Engine), Feedback Sentiment Analysis and Tracking(for user and product managers to better develop the product)
+**Core Features** - Instantaneous meetup with other users, Optimal location/route, Feedback Sentiment Analysis and Tracking
 
 ## Video Demo
 
