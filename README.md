@@ -1,6 +1,6 @@
 # InstaMeet
 
-**Need to update Picture**
+![image](http://cubeupload.com/im/coding_ninja24/mergefromofoct2.jpg)
 
 ## Project Description
 
