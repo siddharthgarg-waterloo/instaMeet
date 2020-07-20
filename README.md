@@ -1,6 +1,6 @@
 # InstaMeet
 
-![image](https://u.cubeupload.com/coding_ninja24/mergefromofoct2.jpg)
+![InstaMeet](/resources/instameet-cover.png?raw=true"InstaMeet")
 
 ## Project Description
 
